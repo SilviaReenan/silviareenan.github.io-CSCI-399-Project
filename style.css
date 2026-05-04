@@ -8,6 +8,7 @@ nav {
 }
 
 nav a {
+  text-align: center;
   color: white;
   margin-right: 30px;
   text-decoration: none;
