@@ -1,7 +1,8 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0; /* light gray background */
+  background-color: #f0f0f0;
   margin: 0;
+  line-height: 1.6;
 }
 
 /* navbar stays the same */
@@ -18,14 +19,6 @@ nav a {
   font-size: 24px;
 }
 
-.page {
-  background-color: white;
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  border-radius: 8px;
-
 nav a.active {
   background-color: white;
   color: #c956f0;
@@ -34,11 +27,73 @@ nav a.active {
   font-weight: bold;
 }
 
+.page {
+  background-color: white;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  border-radius: 8px;
+}
 
 .page h1 {
   text-align: center;
+  font-size: 2em;
+  color: #000;
+}
+
+/* Consistent typography across all pages.
+   Higher specificity than report-styles.css's class-only selectors,
+   so these win over the Google-Docs export rules. */
+.page p,
+.page li,
+.page span,
+.page a,
+.page td,
+.page th {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  color: #000;
 }
 
 .page p {
+  margin: 0 0 1em 0;
   text-align: left;
+}
+
+.page ul,
+.page ol {
+  margin: 0 0 1em 0;
+  padding-left: 1.5em;
+}
+
+.page li {
+  margin-bottom: 0.25em;
+}
+
+.page h1,
+.page h2,
+.page h3,
+.page h4 {
+  font-family: Arial, sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.page h2 { font-size: 1.4em; }
+.page h3 { font-size: 1.2em; }
+
+/* Code stays monospace and slightly smaller */
+.page code,
+.page pre,
+.page .c0,
+.page .c6 {
+  font-family: Consolas, monospace;
+  font-size: 14px;
+}
+
+.page img {
+  max-width: 100%;
+  height: auto;
 }
